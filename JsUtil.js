@@ -70,10 +70,5 @@ JsUtil = {
 			if (re.exec(ua) != null) rv = parseFloat(RegExp.$1);
 		}
 		return rv;
-	},
-
-	test:function()
-	{
-		
 	}
 };
