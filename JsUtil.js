@@ -70,5 +70,26 @@ JsUtil = {
 			if (re.exec(ua) != null) rv = parseFloat(RegExp.$1);
 		}
 		return rv;
+	},
+
+	
+	/*
+	* @ return prefix an integer with zeros
+	* @ return 넘버 앞에 '0' 추가
+	* @ type String
+	* */
+	PrefixInteger1:function(num, length) {
+
+	    return (num / Math.pow(10, length)).toFixed(length).substr(2);
+	},
+
+	PrefixInteger2:function(num, length) {
+  
+		return ( "0000000000000000" + num ).substr( -length );
+	},
+
+	PrefixInteger3:function(num, length) {
+  
+		return (Array(length).join('0') + num).slice(-length);
 	}
 };
